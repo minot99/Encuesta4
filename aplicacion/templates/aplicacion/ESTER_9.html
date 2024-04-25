@@ -1,0 +1,68 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div id="barra-porcentaje" style="background: green" class="text-xl font-medium text-blue-100 text-center leading-none rounded-full" style="width: 100%">100%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+
+<!-- Formulario 1 start -->
+
+<div class="stp step-x"> <!-- Asegúrate de ajustar 'step-x' al número de paso correcto en tu secuencia de formulario -->
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Inventario y Acceso al Ecosistema ESTER
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- Inventario de recursos de inglés disponibles en ESTER -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="recursos-ester">
+                    Inventario de recursos de inglés disponibles en ESTER (cursos, OVA, libros en inglés, audiolibros, otros) Tipo y número
+                </label>
+                <div class="flex flex-wrap">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-1" min="0" placeholder="Cantidad cursos">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-2" min="0" placeholder="Cantidad OVA">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-3" min="0" placeholder="Cantidad de libros en inglés">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-4" min="0" placeholder="Cantidad audiolibros">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-4" min="0" placeholder="Cantidad otros">
+                </div>
+            </div>
+        </div>
+
+        <!-- Número de acceso de los directores y docentes al Ecosistema ESTER durante 2023 y 2024 -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="acceso-ester-numero">
+                    Número de Acceso de los directores y docentes al Ecosistema ESTER durante 2023 y 2024
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="acceso-ester-numero" min="0" placeholder="Ingrese el número total de accesos">
+            </div>
+        </div>
+
+        <!-- Porcentaje de acceso de los directores y docentes al Ecosistema ESTER durante 2023 y 2024 -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="acceso-ester-porcentaje">
+                    Porcentaje de Acceso de los directores y docentes al Ecosistema ESTER durante 2023 y 2024
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="acceso-ester-porcentaje" min="0" max="100" placeholder="0% a 100%">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Formulario 1 end -->
+
+{% endblock %}

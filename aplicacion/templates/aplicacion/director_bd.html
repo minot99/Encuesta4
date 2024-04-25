@@ -1,0 +1,166 @@
+{% extends "base/vertical_base.html" %}
+
+{% block page_content %}
+<style>
+    th, td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      white-space: nowrap;
+      text-align: center;
+      border-left: 1px solid #dee2e6; /* Añade bordes a la izquierda de las celdas */
+      border-right: 1px solid #dee2e6; /* Añade bordes a la derecha de las celdas */
+    }
+</style>
+<div class="col mt-2">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col">                      
+                    <h4 class="card-title">Base de datos - Formulario Director</h4>                      
+                </div><!--end col-->                                        
+            </div><!--end row-->                                  
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table mb-0">
+                  <thead class="thead-light">
+                      <tr>
+                          <th class="border-top-0">Nombre</th>
+                          <th class="border-top-0">Apellido</th>
+                          <th class="border-top-0">Cédula</th>
+                          <th class="border-top-0">Teléfono Oficina</th>
+                          <th class="border-top-0">Teléfono Personal</th>
+                          <th class="border-top-0">Correo Institucional</th>
+                          <th class="border-top-0">Correo Personal 1</th>
+                          <th class="border-top-0">Correo Personal 2</th>
+                          <th class="border-top-0">Código SIACE</th>
+                          <th class="border-top-0">Nombre Centro Educativo</th>
+                          <th class="border-top-0">Región Educativa</th>
+                          <th class="border-top-0">Provincia</th>
+                          <th class="border-top-0">Dirección</th>
+                          <th class="border-top-0">Nivel Escolar</th>
+                          <th class="border-top-0">Matrícula Total</th>
+                          <th class="border-top-0">Grado 1</th>
+                          <th class="border-top-0">Femenino 1</th>
+                          <th class="border-top-0">Masculino 1</th>
+                          <th class="border-top-0">Grado 2</th>
+                          <th class="border-top-0">Femenino 2</th>
+                          <th class="border-top-0">Masculino 2</th>
+                          <th class="border-top-0">Grado 3</th>
+                          <th class="border-top-0">Femenino 3</th>
+                          <th class="border-top-0">Masculino 3</th>
+                          <th class="border-top-0">Grado 4</th>
+                          <th class="border-top-0">Femenino 4</th>
+                          <th class="border-top-0">Masculino 4</th>
+                          <th class="border-top-0">Total Docentes</th>
+                          <th class="border-top-0">Docentes 1</th>
+                          <th class="border-top-0">Docentes 2</th>
+                          <th class="border-top-0">Docentes 3</th>
+                          <th class="border-top-0">Docentes 4</th>
+                          <th class="border-top-0">Estudiantes Salón</th>
+                          <th class="border-top-0">Docentes Asignatura</th>
+                          <th class="border-top-0">Participa PPB</th>
+                          <th class="border-top-0">Estudiantes Nivel PPB</th>
+                          <th class="border-top-0">Docentes Capacitados PPB</th>
+                          <th class="border-top-0">Docentes Aprobados PPB</th>
+                          <th class="border-top-0">Docentes Capacitación Exterior</th>
+                          <th class="border-top-0">Códigos Plan Estudio</th>
+                          <th class="border-top-0">Planes Estudio</th>
+                          <th class="border-top-0">Asignaturas Inglés Plan Estudios</th>
+                          <th class="border-top-0">Asignaturas Inglés Dictadas</th>
+                          <th class="border-top-0">Planes Clase</th>
+                          <th class="border-top-0">Horas Inglés</th>
+                          <th class="border-top-0">Horas Teóricas</th>
+                          <th class="border-top-0">Horas Prácticas</th>
+                          <th class="border-top-0">Actividades Propio Centro</th>
+                          <th class="border-top-0">Actividades MEDUCA Centro</th>
+                          <th class="border-top-0">Actividades Externas Centro</th>
+                          <th class="border-top-0">Detalle Actividades Anual</th>
+                          <th class="border-top-0">Cantidad Estudiantes Actividades Externas 1</th>
+                          <th class="border-top-0">Cantidad Estudiantes Actividades Externas 2</th>
+                          <th class="border-top-0">Cantidad Estudiantes Actividades Externas 3</th>
+                          <th class="border-top-0">Cantidad Estudiantes Actividades Externas 4</th>
+                          <th class="border-top-0">After School Existencia</th>
+                          <th class="border-top-0">After School Descripción</th>
+                          <th class="border-top-0">After School Participación 1</th>
+                          <th class="border-top-0">After School Participación 2</th>
+                          <th class="border-top-0">After School Participación 3</th>
+                          <th class="border-top-0">After School Participación 4</th>
+                          <th class="border-top-0">After School Recursos</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% for d in director %}
+                      <tr>
+                          <td>{{ d.nombre }}</td>
+                          <td>{{ d.apellido }}</td>
+                          <td>{{ d.cedula }}</td>
+                          <td>{{ d.telefono_oficina }}</td>
+                          <td>{{ d.telefono_personal }}</td>
+                          <td>{{ d.correo_institucional }}</td>
+                          <td>{{ d.correo_personal1 }}</td>
+                          <td>{{ d.correo_personal2 }}</td>
+                          <td>{{ d.codigo_siace }}</td>
+                          <td>{{ d.nombre_centro_educativo }}</td>
+                          <td>{{ d.region_educativa }}</td>
+                          <td>{{ d.provincia }}</td>
+                          <td>{{ d.direccion }}</td>
+                          <td>{{ d.nivel_escolar }}</td>
+                          <td>{{ d.matricula_total }}</td>
+                          <td>{{ d.grado1 }}</td>
+                          <td>{{ d.femenino1 }}</td>
+                          <td>{{ d.masculino1 }}</td>
+                          <td>{{ d.grado2 }}</td>
+                          <td>{{ d.femenino2 }}</td>
+                          <td>{{ d.masculino2 }}</td>
+                          <td>{{ d.grado3 }}</td>
+                          <td>{{ d.femenino3 }}</td>
+                          <td>{{ d.masculino3 }}</td>
+                          <td>{{ d.grado4 }}</td>
+                          <td>{{ d.femenino4 }}</td>
+                          <td>{{ d.masculino4 }}</td>
+                          <td>{{ d.total_docentes }}</td>
+                          <td>{{ d.docentes1 }}</td>
+                          <td>{{ d.docentes2 }}</td>
+                          <td>{{ d.docentes3 }}</td>
+                          <td>{{ d.docentes4 }}</td>
+                          <td>{{ d.estudiantes_salon }}</td>
+                          <td>{{ d.docentes_asignatura }}</td>
+                          <td>{{ d.participa_ppb }}</td>
+                          <td>{{ d.estudiantes_nivel_ppb }}</td>
+                          <td>{{ d.docentes_capacitados_ppb }}</td>
+                          <td>{{ d.docentes_aprobados_ppb }}</td>
+                          <td>{{ d.docentes_capacitacion_exterior }}</td>
+                          <td>{{ d.codigos_plan_estudio }}</td>
+                          <td>{{ d.planes_estudio }}</td>
+                          <td>{{ d.asignaturas_ingles_plan_estudios }}</td>
+                          <td>{{ d.asignaturas_ingles_dictadas }}</td>
+                          <td>{{ d.planes_clase }}</td>
+                          <td>{{ d.horas_ingles }}</td>
+                          <td>{{ d.horas_teoricas }}</td>
+                          <td>{{ d.horas_practicas }}</td>
+                          <td>{{ d.actividades_propio_centro }}</td>
+                          <td>{{ d.actividades_meduca_centro }}</td>
+                          <td>{{ d.actividades_externas_centro }}</td>
+                          <td>{{ d.detalle_actividades_anual }}</td>
+                          <td>{{ d.cantidad_estudiantes_actividades_externas_1 }}</td>
+                          <td>{{ d.cantidad_estudiantes_actividades_externas_2 }}</td>
+                          <td>{{ d.cantidad_estudiantes_actividades_externas_3 }}</td>
+                          <td>{{ d.cantidad_estudiantes_actividades_externas_4 }}</td>
+                          <td>{{ d.after_school_existencia }}</td>
+                          <td>{{ d.after_school_descripcion }}</td>
+                          <td>{{ d.after_school_participacion_1 }}</td>
+                          <td>{{ d.after_school_participacion_2 }}</td>
+                          <td>{{ d.after_school_participacion_3 }}</td>
+                          <td>{{ d.after_school_participacion_4 }}</td>
+                          <td>{{ d.after_school_recursos }}</td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+            </div><!--end table-responsive--> 
+        </div><!--end card-body--> 
+    </div><!--end card--> 
+</div><!--end col-->
+<a href="{% url 'export_director' %}" class="btn btn-primary">Exportar a Excel</a>
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">3</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">4</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">5</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">6</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div id="barra-porcentaje" class="text-xl font-medium text-blue-100 text-center leading-none rounded-full" style="width: 0%">0%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+
+<!-- Formulario 1 start -->
+
+<div class="stp step-1">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Recursos Multimedia en el Centro Educativo
+    </h6>
+    <div class="flex flex-wrap">
+        
+
+        <!-- ¿Cuáles son los materiales multimedia con los que cuenta el Centro educativo? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="materiales-multimedia">
+                    ¿Cuáles son los materiales multimedia con los que cuenta el Centro educativo?
+                </label>
+                <select multiple class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="materiales-multimedia">
+                    <option value="presentaciones">Presentaciones multimedia</option>
+                    <option value="simulaciones">Simulaciones</option>
+                    <option value="juegos">Juegos educativos</option>
+                    <option value="objetos_aprendizaje">Objetos de aprendizaje</option>
+                    <option value="entornos_virtuales">Entornos virtuales de aprendizaje</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Con cuántos materiales multimedia cuenta el Centro educativo? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cantidad-multimedia">
+                    ¿Con cuántos materiales multimedia cuenta el Centro educativo? (CD, DVD, MP4, Servicios de Streaming, otros)
+                </label>
+                <div class="flex flex-wrap">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2"  min="0" placeholder="Cantidad CD">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2"  min="0" placeholder="Cantidad DVD">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2"  min="0" placeholder="Cantidad MP4">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2"  min="0" placeholder="Cantidad streaming">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm"  min="0" placeholder="Cantidad otros">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex" style="justify-content: end;">
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+
+<!-- Formulario 1 end -->
+
+<!-- Formulario 2 start -->
+<div class="stp step-2"> <!-- Asegúrate de ajustar 'step-x' al número de paso correcto en tu secuencia de formulario -->
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Materiales Fungibles para el Aprendizaje del Idioma Inglés
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Cuenta con materiales físicos fungibles para el aprendizaje del idioma inglés? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="fungibles-existencia">
+                    ¿Cuenta con materiales físicos fungibles (se agoten con su uso) para el aprendizaje del idioma inglés? para el aprendizaje del idioma inglés? Papelería: folios, cuadernos, libretas, carpetas, sobres, etc.
+                    Materiales de escritura: bolígrafos, lápices, rotuladores, gomas de borrar, tizas, etc.
+                    Materiales de dibujo y pintura: cartulinas, pinturas, pinceles, acuarelas, etc.
+                    Materiales para manualidades: plastilina, pegamento, tijeras, papel celofán, etc.
+                    Materiales de laboratorio: tubos de ensayo, probetas, pipetas, etc.
+                    Recursos tecnológicos: cartuchos de tinta, tóner para impresoras, CDs, DVDs, etc.
+                    
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="fungibles-existencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Cuáles son los materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="materiales-tipo-ubicacion">
+                    ¿Cuáles son materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo? (Especificar tipo de recurso y ubicación)
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="materiales-tipo-ubicacion" placeholder="Ejemplo: Libros en biblioteca, juegos en aula, etc."></textarea>
+            </div>
+        </div>
+
+        <!-- ¿Con qué cantidad de materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="materiales-inventario">
+                    ¿Con qué cantidad de materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo?
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="materiales-inventario" placeholder="Describa el inventario disponible"></textarea>
+            </div>
+        </div>
+
+        <!-- ¿Con qué frecuencia reponen los materiales físicos para el aprendizaje del idioma inglés? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="materiales-reposicion">
+                    ¿Con qué frecuencia reponen los materiales físicos para el aprendizaje del idioma inglés?
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="materiales-reposicion" placeholder="Especifique la frecuencia de reposición">
+            </div>
+        </div>
+
+        <!-- ¿A través de qué medios compran los materiales físicos para el aprendizaje del idioma inglés? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="medios-compra">
+                    ¿A través de qué medios compran los materiales físicos para el aprendizaje del idioma inglés?
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="medios-compra" placeholder="Describa los medios de compra (e.g., Fondos de FECE, Asociación de padres de familia, etc.)"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Formulario 2 end -->
+{% endblock %}

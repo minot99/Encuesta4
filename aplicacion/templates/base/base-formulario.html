@@ -1,0 +1,128 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <link href="{% static 'css/formulario.css' %}" rel="stylesheet" />
+    <script src="{% static '/js/formulario.js' %}" defer></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#eff4ff]">
+    <section class="py-1 bg-blueGray-50">
+        <div class="w-full flex lg:w-8/12 px-4 mx-auto my-6 h-full">
+            <div class="columna-iz w-full lg:w-2/12 mr-6">
+                <!-- Sidebar start -->
+                {% block numero-pagina %}
+                <div class="form-sidebar p-6 h-full">
+                    <div class="step active">
+                        <div class="circle">1</div>
+                        <div class="step-content">
+                            <span>Paso</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="circle">2</div>
+                        <div class="step-content">
+                        <span>Paso</span>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+            <div class="relative flex flex-col min-w-0 break-words w-full lg:w-10/12 bg-white py-8 px-6 shadow rounded-lg sm:px-10 shadow-blue-500/50 shadow-2xl">
+                <div class="rounded-t bg-white mb-0 px-6 py-6">
+                    <div class="text-center flex justify-between">
+                        <a href="https://www.meduca.gob.pa/">
+                            <img class="image-navegation-1" src="{% static 'assets/images/meduca-login.webp' %}" />
+                        </a>
+                        <a href="https://meduca.edu.pa/">
+                            <img class="image-navegation-2" src="{% static 'assets/images/logo-login.webp' %}" />
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full bg-[#eff4ff] rounded-full dark:bg-gray-700 my-6">
+                    {% block barra-porcentaje %}
+                    <div class="bg-[#483eff] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 50%"> 50%</div>
+                    {% endblock %}
+                </div>
+                <div class="flex-auto pt-8 pb-4">
+                        {% block contenido-formulario %}
+                        <h6 class="text-xl font-bold text-[#233559] mb-6">
+                            Información personal del docente
+                        </h6>
+                        <div class="flex flex-wrap">
+                            <div class="w-full lg:w-6/12 pr-4">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="nombre-docente">
+                                        Nombre del docente
+                                    </label>
+                                    <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu nombre" id="nombre-docente">
+                                </div>
+                            </div>
+                    
+                            <div class="w-full lg:w-6/12">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="apellido-docente">
+                                        Apellido del docente
+                                    </label>
+                                    <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu apellido" id="apellido-docente">
+                                </div>
+                            </div>
+                    
+                            <div class="w-full lg:w-6/12 pr-4">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="cedula-docente">
+                                        Cédula del docente
+                                    </label>
+                                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="Coloca tu cédula" min="0" id="cedula-docente">
+                                </div>
+                            </div>
+                    
+                            <div class="w-full lg:w-6/12">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="tel-ofi-docente">
+                                        Teléfono oficina del docente
+                                    </label>
+                                    <input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="Escribe el teléfono de oficina del docente" id="tel-ofi-docente">
+                                </div>
+                            </div>
+                    
+                            <div class="w-full lg:w-6/12 pr-4">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="tel-per-docente">
+                                        Teléfono personal del docente
+                                    </label>
+                                    <input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu teléfono personal" id="tel-per-docente">
+                                </div>
+                            </div>
+                    
+                            <div class="w-full lg:w-6/12">
+                                <div class="relative w-full mb-3">
+                                    <label class="block text-sm font-medium text-[#233559]" for="correo-inst-docente">
+                                        Correo institucional del docente
+                                    </label>
+                                    <input type="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-inst-docente">
+                                </div>
+                            </div>
+                    
+                            <div>
+                                <button type="submit" class="mt-6 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Siguiente</button>
+                            </div>
+                        </div>
+                        {% endblock %}
+                </div>
+            </div>
+            <footer class="relative pt-8 pb-6 mt-2">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center md:justify-between justify-center">
+                        <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+</html>

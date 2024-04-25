@@ -1,0 +1,749 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">3</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">4</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">5</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">6</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div id="barra-porcentaje" class="text-xl font-medium text-blue-100 text-center leading-none rounded-full" style="width: 0%">0%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+<form action="{% url 'form_director' %}" method="post">
+    {% csrf_token %}
+    <!-- * Formulario 1 start -->
+    <div class="stp step-1">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Información personal director 1
+        </h6>
+        <div class="flex flex-wrap">
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="nombre-director">
+                        Nombre del director
+                    </label>
+                    <input type="text" name="nombre" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu nombre" id="nombre-director" value="{{ nombre_usuario }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="apellido-director">
+                        Apellido del director
+                    </label>
+                    <input type="text" name="apellido" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu apellido" id="apellido-director">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="cedula-director">
+                        Cédula del director
+                    </label>
+                    <input type="text" name="cedula" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Coloca tu cédula" min="0" id="cedula-director" value="{{ cedula_usuario }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="tel-ofi-director">
+                        Teléfono oficina del director
+                    </label>
+                    <input type="tel" name="telefono_oficina" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el teléfono de oficina del director" id="tel-ofi-director">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="tel-per-director">
+                        Teléfono personal del director
+                    </label>
+                    <input type="tel" name="telefono_personal" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu teléfono personal" id="tel-per-director">
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="correo-inst-director">
+                        Correo institucional del director
+                    </label>
+                    <input type="email" name="correo_institucional" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-inst-director" value="{{ correo_usuario }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="correo-per-director1">
+                        Correo personal del director
+                    </label>
+                    <input type="email" name="correo_personal1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-per-director1">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="correo-per-director2">
+                        Correo personal del director
+                    </label>
+                    <input type="email" name="correo_personal2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-per-director2">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btns flex" style="justify-content: end;">
+            <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Siguiente</div>
+        </div>
+    </div>
+
+    <!-- Formulario 1 end -->
+
+    <!-- * Formulario 2 start -->
+    <div class="stp step-2">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Información del Director 2
+        </h6>
+
+        <div class="flex flex-wrap">
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-codigo-siace">
+                        Código SIACE
+                    </label>
+                    <input type="text" name="codigo_siace" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el código" id="director-2-codigo-siace" value="{{ cod_siace }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-nombre-centro">
+                        Nombre del Centro educativo
+                    </label>
+                    <input type="text" name="nombre_centro_educativo" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el nombre del centro educativo" id="director-2-nombre-centro" value="{{ nombre_escuela }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-region-educativa">
+                        Región Educativa
+                    </label>
+                    <input type="text" name="region_educativa" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba la región educativa" id="director-2-region-educativa" value="{{ corregimiento }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-provincia">
+                        Provincia*
+                    </label>
+                    <input type="text" name="provincia" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el nombre de la provincia" id="director-2-provincia" value="{{ provincia }}">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-12/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-direccion">
+                        Dirección*
+                    </label>
+                    <input type="text" name="direccion" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba la dirección" id="director-2-direccion">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-12/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-geolocalizacion">
+                        Geolocalización*
+                    </label>
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="director-2-nivel-escolar">
+                        Nivel escolar ofrecido {{nivel}}
+                    </label>
+                    <select name="nivel_escolar" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="director-2-nivel-escolar">
+                        <option value="">Selecciona un nivel</option>
+                        <option 
+                            {% if nivel == 'Inicial' %}
+                            selected
+                            {% endif %}
+                            value="Inicial">Inicial</option>
+                        <option 
+                            {% if nivel == 'Primaria' %}
+                            selected
+                            {% endif %}
+                        value="Primaria">Primaria</option>
+                        <option 
+                            {% if nivel == 'Premedia' %}
+                            selected
+                            {% endif %}
+                        value="Premedia">Premedia</option>
+                        <option 
+                            {% if nivel == 'Media' %}
+                            selected
+                            {% endif %}
+                        value="Media">Media</option>
+                    </select>
+                </div>
+            </div>
+        
+            <!-- Matrícula total de estudiantes -->
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="matricula-total">
+                        Matrícula total de estudiantes
+                    </label>
+                    <input type="number" name="matricula_total" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="matricula-total" min="0" placeholder="Ingrese el número total">
+                </div>
+            </div>
+
+            <!-- Alumnos por grado y division por sexo -->
+            <div class="flex flex-wrap -mx-4">
+                <!-- Fila para Grado 1 -->
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="matricula-grado-1">
+                        Matrícula total para Grado 1
+                    </label>
+                    <input type="number" name="grado1" id="matricula-grado-1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="femenino-grado-1">
+                        Grado 1 Femenino
+                    </label>
+                    <input type="number" name="femenino1" id="femenino-grado-1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="masculino-grado-1">
+                        Grado 1 Masculino
+                    </label>
+                    <input type="number" name="masculino1" id="masculino-grado-1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+            
+                <!-- Fila para Grado 2 -->
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="matricula-grado-2">
+                        Matrícula total para Grado 2
+                    </label>
+                    <input type="number" name="grado2" id="matricula-grado-2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="femenino-grado-2">
+                        Grado 2 Femenino
+                    </label>
+                    <input type="number" name="femenino2" id="femenino-grado-2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="masculino-grado-2">
+                        Grado 2 Masculino
+                    </label>
+                    <input type="number" name="masculino2" id="masculino-grado-2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+            
+                <!-- Fila para Grado 3 -->
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="matricula-grado-3">
+                        Matrícula total para Grado 3
+                    </label>
+                    <input type="number" name="grado3" id="matricula-grado-3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="femenino-grado-3">
+                        Grado 3 Femenino
+                    </label>
+                    <input type="number" name="femenino3" id="femenino-grado-3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="masculino-grado-3">
+                        Grado 3 Masculino
+                    </label>
+                    <input type="number" name="masculino3" id="masculino-grado-3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+            
+                <!-- Fila para Grado 4 -->
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="matricula-grado-4">
+                        Matrícula total para Grado 4
+                    </label>
+                    <input type="number" name="grado4" id="matricula-grado-4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="femenino-grado-4">
+                        Grado 4 Femenino
+                    </label>
+                    <input type="number" name="femenino4" id="femenino-grado-4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+                <div class="w-full lg:w-4/12 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="masculino-grado-4">
+                        Grado 4 Masculino
+                    </label>
+                    <input type="number" name="masculino4" id="masculino-grado-4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+            </div>
+            
+            <!-- Cantidad total de docentes -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="total-docentes">
+                        Cantidad
+                    </label>
+                    <input type="number" name="total_docentes" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="total-docentes" min="0" placeholder="Ingrese el número total de docentes">
+                </div>
+            </div>
+
+            <!-- Cantidad de docentes por grado, cada grado en una fila -->
+            <div class="flex flex-wrap -mx-4">
+                <!-- Grado 1 -->
+                <div class="w-full lg:w-1/4 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-grado-1">
+                        Docentes grado 1
+                    </label>
+                    <input type="number" name="docentes1" id="docentes-grado-1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+
+                <!-- Grado 2 -->
+                <div class="w-full lg:w-1/4 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-grado-2">
+                        Docentes grado 2
+                    </label>
+                    <input type="number" name="docentes2" id="docentes-grado-2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+
+                <!-- Grado 3 -->
+                <div class="w-full lg:w-1/4 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-grado-3">
+                        Docentes grado 3
+                    </label>
+                    <input type="number" name="docentes3" id="docentes-grado-3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+
+                <!-- Grado 4 -->
+                <div class="w-full lg:w-1/4 px-4 mb-4">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-grado-4">
+                        Docentes grado 4
+                    </label>
+                    <input type="number" name="docentes4" id="docentes-grado-4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" min="0" placeholder="Cantidad">
+                </div>
+            </div>
+
+            <!-- Número de estudiantes por salón -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="estudiantes-salon">
+                        Número de estudiantes por salón
+                    </label>
+                    <input type="number" name="estudiantes_salon" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="estudiantes-salon" min="0" placeholder="Ingrese el número promedio de estudiantes por salón">
+                </div>
+            </div>
+        
+            <!-- Cantidad de docentes por asignatura -->
+            <div class="w-full lg:w-12/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-asignatura">
+                        Cantidad de docentes por asignatura
+                    </label>
+                    <input type="number" name="docentes_asignatura" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-asignatura" min="0" placeholder="Ingrese la cantidad de docentes por asignatura">
+                </div>
+            </div>
+
+        </div>
+
+            <div class="btns flex justify-between">
+                <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Atrás</div>
+    
+                <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Siguiente</div>
+            </div>
+    </div>
+    <!-- Formulario 2 end -->
+
+    <!-- * Formulario 3 start -->
+    <div class="stp step-3">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Información del Director 3
+        </h6>
+
+        <div class="flex flex-wrap">
+
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="participa-ppb">
+                        Participa Activamente en PPB
+                    </label>
+                    <select name="participa_ppb" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="participa-ppb">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="estudiantes-nivel-ppb">
+                        Estudiantes por nivel en PPB
+                    </label>
+                    <input type="number" name="estudiantes_nivel_ppb" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="estudiantes-nivel-ppb" placeholder="Rango" min="0">
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-capacitados-ppb">
+                        Cantidad de Docentes Capacitados localmente en el PPB por grado
+                    </label>
+                    <input type="number" name="docentes_capacitados_ppb" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-capacitados-ppb" placeholder="Rango">
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-6/12">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-aprobados-ppb">
+                        Cantidad de Docentes capacitados localmente que aprobaron el examen por grado
+                    </label>
+                    <input type="number" name="docentes_aprobados_ppb" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-aprobados-ppb" placeholder="Rango">
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="docentes-capacitacion-exterior">
+                        Cantidad que se capacitaron en el extranjero por grado
+                    </label>
+                    <input type="number" name="docentes_capacitacion_exterior" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-capacitacion-exterior" placeholder="Rango">
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="btns flex justify-between">
+            <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Atrás</div>
+
+            <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Siguiente</div>
+        </div>
+    </div>
+    <!-- Formulario 3 end -->
+
+    <!-- Formulario 4 start -->
+
+    <div class="stp step-4">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Información del Director 4
+        </h6>
+
+        <div class="flex flex-wrap">
+
+            <!-- Códigos del plan de estudio (malla curricular) disponibles en el Centro Educativo -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="codigos-plan-estudio">
+                        Códigos del plan de estudio (malla curricular) disponibles en el Centro Educativo
+                    </label>
+                    <input type="text" name="codigos_plan_estudio" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="codigos-plan-estudio" placeholder="Coloque el código">
+                </div>
+            </div>
+
+            <!-- Planes de estudio (malla curricular) disponibles en el Centro Educativo (año 2023) -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="planes-estudio">
+                        Planes de estudio (malla curricular) disponibles en el Centro Educativo (año 2023)
+                    </label>
+                    <input type="text" name="planes_estudio" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="planes-estudio" placeholder="Escriba separados por ','">
+                </div>
+            </div>
+
+            <!-- ¿En el plan de estudios se tienen diagramadas otras asignaturas en idioma inglés? -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="asignaturas-ingles-plan-estudios">
+                        ¿En el plan de estudios se tienen diagramadas otras asignaturas en idioma inglés?
+                    </label>
+                    <select name="asignaturas_ingles_plan_estudios" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="asignaturas-ingles-plan-estudios">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- ¿En el Centro Educativo, se dictan otras asignaturas en idioma inglés? (Ejemplo: Math, Science, etc.) -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="asignaturas-ingles-dictadas">
+                        ¿En el Centro Educativo, se dictan otras asignaturas en idioma inglés? (Ejemplo: Math, Science, etc.)
+                    </label>
+                    <select name="asignaturas_ingles_dictadas" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="asignaturas-ingles-dictadas">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Planes de clase según plan de estudios (Contraste entre el Plan de estudio y la planificación/programación del docente) (año 2023) -->
+            <div class="w-full lg:w-12/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="planes-clase">
+                        Planes de clase según plan de estudios (Contraste entre el Plan de estudio y la planificación /programación del docente) (año 2023)
+                    </label>
+                    <textarea name="planes_clase" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="planes-clase" placeholder="Haga una descripción"></textarea>
+                </div>
+            </div>
+
+            <!-- Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios) -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="horas-ingles">
+                        Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios)
+                    </label>
+                    <input type="number" name="horas_ingles" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-ingles" placeholder="Coloque las horas">
+                </div>
+            </div>
+
+            <!-- Horas teóricas impartidas dentro del plan de estudio -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="horas-teoricas">
+                        Horas teóricas impartidas dentro del plan de estudio
+                    </label>
+                    <input type="number" name="horas_teoricas" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-teoricas" placeholder="Coloque las horas">
+                </div>
+            </div>
+
+            <!-- Horas prácticas impartidas dentro del plan de estudio -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="horas-practicas">
+                        Horas prácticas impartidas dentro del plan de estudio
+                    </label>
+                    <input type="number" name="horas_practicas" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-practicas" placeholder="Coloque las horas">
+                </div>
+            </div>
+
+        </div>    
+
+        <div class="btns flex justify-between">
+            <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Atrás</div>
+
+            <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Siguiente</div>
+        </div>
+    </div>
+
+    <!-- Formulario 4 end -->
+
+    <!-- Formulario 5 start -->
+
+    <div class="stp step-5">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Información del Director 5
+        </h6>
+        <div class="flex flex-wrap">
+            <!-- Pregunta 1 -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="actividades-propio-centro">
+                        ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde su Centro Educativo? (Actividades especiales en inglés que realiza la institución internamente y / o con otras instituciones (concursos, clubes de inglés, otros).
+                    </label>
+                    <select name="actividades_propio_centro" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="actividades-propio-centro">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <!-- Pregunta 3 -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="actividades-meduca-centro">
+                        ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde MEDUCA y se realizan en su Centro Educativo?
+                    </label>
+                    <select name="actividades_meduca_centro" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="actividades-meduca-centro">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <!-- Pregunta 5 -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="actividades-externas-centro">
+                        ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde fundaciones, otras instituciones, empresa privada u otros organismos que se realizan en su Centro Educativo?
+                    </label>
+                    <select name="actividades_externas_centro" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="actividades-externas-centro">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Pregunta 6 -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="detalle-actividades-anual">
+                        Mencione las realizadas durante el último año (2023) y las planificadas para 2024. (nombre y cantidad)
+                    </label>
+                    <textarea name="detalle_actividades_anual" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="detalle-actividades-anual" placeholder="Detalle las actividades y cantidades"></textarea>
+                </div>
+            </div>
+            
+            <!-- Pregunta 7 -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="cantidad-estudiantes-actividades-externas-1">
+                        ¿Cuántos estudiantes participan actualmente en estas actividades por grado?
+                    </label>
+                    <div class="flex flex-wrap">
+                        <input type="number" name="cantidad_estudiantes_actividades_externas_1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-1" min="0" placeholder="Cantidad grado 1">
+                        <input type="number" name="cantidad_estudiantes_actividades_externas_2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-2" min="0" placeholder="Cantidad grado 2">
+                        <input type="number" name="cantidad_estudiantes_actividades_externas_3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-3" min="0" placeholder="Cantidad grado 3">
+                        <input type="number" name="cantidad_estudiantes_actividades_externas_4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4" id="cantidad-estudiantes-actividades-externas-4" min="0" placeholder="Cantidad grado 4">
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="btns flex justify-between">
+            <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Atrás</div>
+
+            <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Siguiente</div>
+        </div>
+    </div>
+
+    <!-- Formulario 5 end -->
+
+    <!-- Formulario 6 start -->
+    <div class="stp step-6">
+        <h6 class="text-xl font-bold text-[#233559] mb-6">
+            Informacion del director 6
+        </h6>
+
+        <div class="flex flex-wrap">
+
+            <!-- Pregunta 1 -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="after-school-existencia">
+                        En su centro educativo, se realizan cursos de inglés tipo "After School" para los estudiantes?
+                    </label>
+                    <select name="after_school_existencia" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-existencia">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <!-- Pregunta 2 -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="after-school-descripcion">
+                        Mencione los cursos de inglés tipo "After School" para los estudiantes que se realizan en su Centro Educativo?
+                    </label>
+                    <textarea name="after_school_descripcion" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-descripcion" placeholder="Describa los cursos ofrecidos"></textarea>
+                </div>
+            </div>
+            
+            
+            <!-- Pregunta 3 -->
+            <div class="w-full lg:w-6/12 pr-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="after-school-participacion">
+                        ¿Cuántos estudiantes participan actualmente en estos cursos "After School" por grado?
+                    </label>
+                    <div>
+                        <input type="number" name="after_school_participacion_1" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-1" min="0" placeholder="Cantidad grado 1">
+                        <input type="number" name="after_school_participacion_2" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-2" min="0" placeholder="Cantidad grado 2">
+                        <input type="number" name="after_school_participacion_3" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-3" min="0" placeholder="Cantidad grado 3">
+                        <input type="number" name="after_school_participacion_4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-participacion-4" min="0" placeholder="Cantidad grado 4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="w-full lg:w-6/12 pl-4">
+                <div class="relative w-full mb-3">
+                    <label class="block text-sm font-medium text-[#233559]" for="after-school-recursos">
+                        ¿Cuentan con recursos multimedia en el Centro Educativo?  (Tablero de tiza, tablero de marcador, Pantallas interactivas, CD, DVD, MP4, Servicios de Streaming, otros)
+                    </label>
+                    <select name="after_school_recursos" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-recursos">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="btns flex justify-between">
+            <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Atrás</div>
+
+            <input type="submit" value="Enviar" class="visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        </div>
+    </div>
+    <!-- Formulario 6 end -->
+</form>
+
+    <script>
+        function initMap() {
+            var latitudLongitud = "9.0873,-79.53303".split(",");
+            var myLatLng = { lat: parseFloat(latitudLongitud[0]), lng: parseFloat(latitudLongitud[1]) };
+    
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 15
+            });
+    
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Tu ubicación'
+            });
+        }
+    </script>   
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUgMUeO3O4-VNYpSllGniNfpU3nvc4tlI&callback=initMap" async defer></script>
+{% endblock %}

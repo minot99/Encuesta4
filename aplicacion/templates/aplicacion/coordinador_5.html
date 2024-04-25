@@ -1,0 +1,512 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">3</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">4</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">5</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">6</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div id="barra-porcentaje" class="text-xl font-medium text-blue-100 text-center leading-none rounded-full" style="width: 0%">0%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+
+<!-- Formulario 1 start -->
+
+<div class="stp step-1">
+
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Información del Coordinador
+    </h6>
+
+    <!-- Cantidad de docentes por asignatura -->
+    <div class="w-full lg:w-12/12">
+        <div class="relative w-full mb-3">
+            <label class="block text-sm font-medium text-[#233559]" for="docentes-asignatura">
+                Cantidad de docentes por asignatura
+            </label>
+            <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-asignatura" min="0" placeholder="Ingrese la cantidad de docentes por asignatura">
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="participa-ppb">
+                    Participa Activamente en PPB
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="participa-ppb">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="estudiantes-nivel-ppb">
+                    Estudiantes por nivel en PPB
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="estudiantes-nivel-ppb" placeholder="Rango" min="0">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="docentes-capacitados-ppb">
+                    Cantidad de Docentes Capacitados localmente en el PPB por grado
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-capacitados-ppb" placeholder="Rango">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="docentes-aprobados-ppb">
+                    Cantidad de Docentes capacitados localmente que aprobaron el examen por grado
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-aprobados-ppb" placeholder="Rango">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="docentes-capacitacion-exterior">
+                    Cantidad que se capacitaron en el extranjero por grado
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="docentes-capacitacion-exterior" placeholder="Rango">
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+
+<!-- Formulario 1 end -->
+
+<!-- Formulario 2 start -->
+<div class="stp step-2">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Información del Coordinador 2
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- Códigos del plan de estudio (malla curricular) disponibles en el Centro Educativo -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="codigos-plan-estudio">
+                    Códigos del plan de estudio (malla curricular) disponibles en el Centro Educativo
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="codigos-plan-estudio" placeholder="Coloque el código">
+            </div>
+        </div>
+        
+        <!-- Planes de estudio (malla curricular) disponibles en el Centro Educativo (año 2023) -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="planes-estudio">
+                    Planes de estudio (malla curricular) disponibles en el Centro Educativo (año 2023)
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="planes-estudio" placeholder="Escriba separados por ','">
+            </div>
+        </div>
+
+        <!-- ¿En el plan de estudios se tienen diagramadas otras asignaturas en idioma inglés? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="asignaturas-ingles-plan-estudios">
+                    ¿En el plan de estudios se tienen diagramadas otras asignaturas en idioma inglés?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="asignaturas-ingles-plan-estudios">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿En el Centro Educativo, se dictan otras asignaturas en idioma inglés? (Ejemplo: Math, Science, etc.) -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="asignaturas-ingles-dictadas">
+                    ¿En el Centro Educativo, se dictan otras asignaturas en idioma inglés? (Ejemplo: Math, Science, etc.)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="asignaturas-ingles-dictadas">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Planes de clase según plan de estudios (Contraste entre el Plan de estudio y la planificación/programación del docente) (año 2023) -->
+        <div class="w-full lg:w-12/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="planes-clase">
+                    Planes de clase según plan de estudios (Contraste entre el Plan de estudio y la planificación /programación del docente) (año 2023)
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="planes-clase" placeholder="Haga una descripción"></textarea>
+            </div>
+        </div>
+
+        <!-- Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios) -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="horas-ingles">
+                    Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios)
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-ingles" placeholder="Coloque las horas">
+            </div>
+        </div>
+
+        <!-- Horas teóricas impartidas dentro del plan de estudio -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="horas-teoricas">
+                    Horas teóricas impartidas dentro del plan de estudio
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-teoricas" placeholder="Coloque las horas">
+            </div>
+        </div>
+
+        <!-- Horas prácticas impartidas dentro del plan de estudio -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="horas-practicas">
+                    Horas prácticas impartidas dentro del plan de estudio
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="horas-practicas" placeholder="Coloque las horas">
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 2 end -->
+
+<!-- Formulario 3 start -->
+
+<div class="stp step-3">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Información del Coordinador 3
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- Pregunta 1 -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="actividades-propio-centro">
+                    ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde su Centro Educativo? (Actividades especiales en inglés que realiza la institución internamente y / o con otras instituciones (concursos, clubes de inglés, otros).
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="actividades-propio-centro">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <!-- Pregunta 3 -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="actividades-meduca-centro">
+                    ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde MEDUCA y se realizan en su Centro Educativo?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="actividades-meduca-centro">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <!-- Pregunta 5 -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="actividades-externas-centro">
+                    ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde fundaciones, otras instituciones, empresa privada u otros organismos que se realizan en su Centro Educativo?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#233559] focus:ring-[#233559]" id="actividades-externas-centro">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Pregunta 6 -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="detalle-actividades-anual">
+                    Mencione las realizadas durante el último año (2023) y las planificadas para 2024. (nombre y cantidad)
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="detalle-actividades-anual" placeholder="Detalle las actividades y cantidades"></textarea>
+            </div>
+        </div>
+        
+        <!-- Pregunta 7 -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cantidad-estudiantes-actividades-externas-1">
+                    ¿Cuántos estudiantes participan actualmente en estas actividades por grado?
+                </label>
+                <div class="flex flex-wrap">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="cantidad-estudiantes-actividades-externas-1" min="0" placeholder="Cantidad grado 1">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="cantidad-estudiantes-actividades-externas-2" min="0" placeholder="Cantidad grado 2">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="cantidad-estudiantes-actividades-externas-3" min="0" placeholder="Cantidad grado 3">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="cantidad-estudiantes-actividades-externas-4" min="0" placeholder="Cantidad grado 4">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+
+<!-- Formulario 3 end -->
+
+<!-- Formulario 4 start -->
+<div class="stp step-4">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Informacion del coordinador 4
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- En su centro educativo, se realizan curso de inglés tipo "After School" para los estudiantes? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="after-school-existencia">
+                    En su centro educativo, se realizan cursos de inglés tipo "After School" para los estudiantes?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-existencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Mencione los cursos de inglés tipo "After School" para los estudiantes que se realizan en su Centro Educativo? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="after-school-descripcion">
+                    Mencione los cursos de inglés tipo "After School" para los estudiantes que se realizan en su Centro Educativo?
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-descripcion" placeholder="Describa los cursos ofrecidos"></textarea>
+            </div>
+        </div>
+        
+        <!-- ¿Cuántos estudiantes participan actualmente en estos cursos After school por grado? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="after-school-participacion">
+                    ¿Cuántos estudiantes participan actualmente en estos cursos "After School" por grado?
+                </label>
+                <div>
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-1" min="0" placeholder="Cantidad grado 1">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-2" min="0" placeholder="Cantidad grado 2">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="after-school-participacion-3" min="0" placeholder="Cantidad grado 3">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="after-school-participacion-4" min="0" placeholder="Cantidad grado 4">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 4 end -->
+
+<!-- Formulario 5 start -->
+<div class="stp step-5">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Informacion del coordinador 5
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- Tipo de señalizaciones en inglés, Desplegar señales-->
+        <div class="w-full lg:w-12/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="tipo-senalizaciones-ingles">
+                    Tipo de señalizaciones en inglés (mencione algunas como: indicaciones de salones, instrucciones, avisos, nombres de objetos, otros)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="tipo-senalizaciones-ingles" multiple>
+                    <option value="comedor">Comedor</option>
+                    <option value="areas_deportivas">Áreas deportivas</option>
+                    <option value="banos">Baños</option>
+                    <option value="pasillos">Pasillos</option>
+                    <option value="murales">Murales</option>
+                    <!-- Agrega más opciones según necesites -->
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Cuentan con señalética / rotulaciones / letreros en inglés en el aula de clases? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="senalizaciones-aula-ingles">
+                    ¿Cuentan con señalética / rotulaciones / letreros en inglés en el aula de clases?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="senalizaciones-aula-ingles">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Cantidad de Señalizaciones en Inglés dentro del aula de clases -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cantidad-senalizaciones-aula">
+                    Cantidad de Señalizaciones en Inglés dentro del aula de clases
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="cantidad-senalizaciones-aula" min="0" placeholder="Ingrese la cantidad total">
+            </div>
+        </div>
+    </div>
+    
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 5 end -->
+
+<!-- Formulario 6 start -->
+<!-- Jerarquia 4 -->
+<div class="stp step-6">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Informacion del coordinador 6
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- Porcentaje de interacción con directivos o administrativos -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="interactua-directivos">
+                    Porcentaje en la que usted como docente interactúa con directivos o administrativos en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="interactua-directivos" min="0" max="100" placeholder="0-100%">
+            </div>
+        </div>
+
+        <!-- Porcentaje de interacción con otros docentes -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="interactua-docentes">
+                    Porcentaje en la que usted como docente interactúa con otros docentes en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="interactua-docentes" min="0" max="100" placeholder="0-100%">
+            </div>
+        </div>
+
+        <!-- Porcentaje de interacción con padres de familia -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="interactua-padres">
+                    Porcentaje en la que usted como docente interactúa con padres de familia en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="interactua-padres" min="0" max="100" placeholder="0-100%">
+            </div>
+        </div>
+
+        <!-- Interacción con los estudiantes fuera de horas de clase -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="interactua-estudiantes">
+                    Interactúa con los estudiantes en idioma inglés dentro del centro educativo (fuera de las horas de clase).
+                </label>
+                <div class="flex flex-wrap">
+                    <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-2" id="interactua-estudiantes">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="interactua-estudiantes-porcentaje" placeholder="Porcentaje del tiempo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Actividades en inglés fuera del aula -->
+        <div class="w-full lg:w-12/12 pr-4">
+            <div class="relative w-full">
+                <label class="block text-sm font-medium text-[#233559]" for="actividades-fuera-aula">
+                    ¿Se realizan actividades en inglés fuera del aula de clases? (Música, teatro, coreografía, etc.)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="actividades-fuera-aula" multiple>
+                    <option value="musica">Música</option>
+                    <option value="teatro">Teatro</option>
+                    <option value="coreografia">Coreografía</option>
+                    <!-- Agrega más opciones según necesites -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Frecuencia de las actividades en inglés fuera del aula -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="frecuencia-actividades">
+                    ¿Con qué frecuencia se realizan estas actividades en inglés fuera del aula de clases?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="frecuencia-actividades">
+                    <option value="trimestral">Trimestral</option>
+                    <option value="mensual">Mensual</option>
+                    <option value="semanal">Semanal</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 6 end -->
+{% endblock %}

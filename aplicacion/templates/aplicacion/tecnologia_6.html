@@ -1,0 +1,516 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">3</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">4</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">5</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">6</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div id="barra-porcentaje" class="text-xl font-medium text-blue-100 text-center leading-none rounded-full" style="width: 0%">0%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+
+<!-- Formulario 1 start -->
+
+<div class="stp step-1">
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Recursos Multimedia en el Centro Educativo
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Cuentan con recursos multimedia en el Centro Educativo? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="tiene-multimedia">
+                    ¿Cuentan con recursos multimedia en el Centro Educativo? (Tablero de tiza, tablero de marcador, Pantallas interactivas, CD, DVD, MP4, Servicios de Streaming, otros)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="tiene-multimedia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Cuáles son los materiales multimedia con los que cuenta el Centro educativo? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="materiales-multimedia">
+                    ¿Cuáles son los materiales multimedia con los que cuenta el Centro educativo?
+                </label>
+                <select multiple class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="materiales-multimedia">
+                    <option value="presentaciones">Presentaciones multimedia</option>
+                    <option value="simulaciones">Simulaciones</option>
+                    <option value="juegos">Juegos educativos</option>
+                    <option value="objetos_aprendizaje">Objetos de aprendizaje</option>
+                    <option value="entornos_virtuales">Entornos virtuales de aprendizaje</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Con cuántos materiales multimedia cuenta el Centro educativo? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cantidad-multimedia">
+                    ¿Con cuántos materiales multimedia cuenta el Centro educativo? (CD, DVD, MP4, Servicios de Streaming, otros)
+                </label>
+                <div class="flex flex-wrap">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4"  min="0" placeholder="Cantidad CD">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4"  min="0" placeholder="Cantidad DVD">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4"  min="0" placeholder="Cantidad MP4">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4"  min="0" placeholder="Cantidad streaming">
+                    <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm mb-4"  min="0" placeholder="Cantidad otros">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+
+<!-- Formulario 1 end -->
+
+<!-- Formulario 2 start -->
+<div class="stp step-2"> 
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Uso de Software de Inglés en Escuelas Bilingües
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Cuentan con un software de inglés? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-existencia">
+                    ¿Cuentan con un software de inglés usado en las escuelas bilingües, para el aprendizaje del inglés?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-existencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Cantidad de software de inglés -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-cantidad">
+                    Cantidad de software de inglés usado en las escuelas bilingües, para el aprendizaje del inglés
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-cantidad" min="0" placeholder="Ingrese la cantidad total">
+            </div>
+        </div>
+
+        <!-- Listado de softwares de inglés -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-listado">
+                    Mencione los softwares de inglés usado en las escuelas bilingües, para el aprendizaje del inglés
+                </label>
+                <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-listado" placeholder="Liste los softwares disponibles"></textarea>
+            </div>
+        </div>
+
+        <!-- Tipo de licencia del software -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-licencia">
+                    Los softwares requieren licencias renovables para su uso o tienen licencias perpetuas (de libre acceso en el tiempo)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-licencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Requisito de acceso a internet para los softwares -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-internet">
+                    Los softwares disponibles requieren acceso a internet para funcionar?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-internet">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Cantidad de usuarios disponibles para el uso de los estudiantes -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="software-usuarios">
+                    ¿Cuántos usuarios tienen disponibles para el uso de los estudiantes?
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="software-usuarios" min="0" placeholder="Ingrese la cantidad de usuarios">
+            </div>
+        </div>
+    </div>
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 2 end -->
+
+<!-- Formulario 3 start -->
+<div class="stp step-3"> 
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Infraestructura de Tecnología Informática
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Cuentan con salones o laboratorios de informática? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="existencia-laboratorios">
+                    ¿Cuentan con salones o laboratorios de informática?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="existencia-laboratorios">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Cuántos salones o laboratorios de informática posee el centro educativo? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cantidad-laboratorios">
+                    ¿Cuántos salones o laboratorios de informática posee el centro educativo?
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="cantidad-laboratorios" min="0" placeholder="Número de laboratorios">
+            </div>
+        </div>
+
+        <!-- Número de computadoras en cada laboratorio -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="computadoras-por-laboratorio">
+                    Número de computadoras en cada laboratorio
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="computadoras-por-laboratorio" min="0" placeholder="Cantidad de computadoras">
+            </div>
+        </div>
+
+        <!-- Marca de los equipos -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="marca-equipos">
+                    Marca de los equipos
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="marca-equipos" placeholder="Especifique marcas">
+            </div>
+        </div>
+
+        <!-- Año de fabricación -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="ano-fabricacion">
+                    Año de fabricación
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="ano-fabricacion" placeholder="Año de fabricación">
+            </div>
+        </div>
+
+        <!-- ¿Las computadoras cuentan con bocinas? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="computadoras-bocinas">
+                    ¿Las computadoras cuentan con bocinas? (incorporado o externo)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="computadoras-bocinas">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Las computadoras cuentan con auriculares o audífonos? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="computadoras-auriculares">
+                    ¿Las computadoras cuentan con auriculares o audífonos? (incorporado o externo)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="computadoras-auriculares">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Las computadoras cuentan con micrófonos? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="computadoras-microfonos">
+                    ¿Las computadoras cuentan con micrófonos? (incorporado o externo)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="computadoras-microfonos">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿Las computadoras cuentan con acceso a internet? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="computadoras-internet">
+                    ¿Las computadoras cuentan con acceso a internet?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="computadoras-internet">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 3 end -->
+
+<!-- Formulario 4 start -->
+<div class="stp step-4"> 
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Laboratorio de Aprendizaje del Idioma Inglés
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Existe un laboratorio dedicado al aprendizaje del idioma inglés? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="laboratorio-ingles-existencia">
+                    ¿Existe un laboratorio dedicado al aprendizaje del idioma inglés?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="laboratorio-ingles-existencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿El laboratorio dedicado al aprendizaje del idioma inglés es el mismo que el laboratorio de informática? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="laboratorio-ingles-informatica">
+                    ¿El laboratorio dedicado al aprendizaje del idioma inglés es el mismo que el laboratorio de informática?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="laboratorio-ingles-informatica">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ¿El laboratorio cuenta con otros recursos que faciliten la enseñanza-aprendizaje del idioma inglés? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="laboratorio-ingles-recursos">
+                    ¿El laboratorio cuenta con otros recursos que faciliten la enseñanza-aprendizaje del idioma inglés? (bocina, impresora, proyector, otros)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="laboratorio-ingles-recursos">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 4 end -->
+
+<!-- Formulario 5 start -->
+<div class="stp step-5"> 
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Infraestructura de Conexión a Internet y WiFi
+    </h6>
+    <div class="flex flex-wrap">
+        <!-- ¿Cuentan con internet? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="internet-existencia">
+                    ¿Cuentan con internet? (si/no)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="internet-existencia">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tipo de enlace de internet -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="tipo-enlace">
+                    Tipo de enlace de internet (coaxial, fibra óptica, satelital)
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="tipo-enlace">
+                    <option value="coaxial">Coaxial</option>
+                    <option value="fibra_optica">Fibra óptica</option>
+                    <option value="satelital">Satelital</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Ancho de banda de la conexión de Internet -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="ancho-banda">
+                    Ancho de banda (velocidad) de conexión de Internet
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="ancho-banda" min="0" placeholder="Ingrese velocidad en Mbps">
+            </div>
+        </div>
+
+        <!-- ¿Cuentan con una solución de Wifi o red inalámbrica en el centro educativo? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="wifi-solucion">
+                    ¿Cuentan con una solución de Wifi o red inalámbrica en el centro educativo?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="wifi-solucion">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option
+                ></select>
+            </div>
+        </div>
+    
+        <!-- Alcance de la solución Wifi o red inalámbrica en el centro educativo -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="wifi-alcance">
+                    Alcance de la solución Wifi o red inalámbrica en el centro educativo
+                </label>
+                <select multiple class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="wifi-alcance">
+                    <option value="direccion">Dirección</option>
+                    <option value="salon_profesores">Salón de profesores</option>
+                    <option value="laboratorio">Laboratorio</option>
+                    <option value="salones_clases">Salones de clases</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+        </div>
+    
+        <!-- ¿Qué porcentaje de cobertura considera que tiene esta solución Wifi o red inalámbrica? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="wifi-cobertura">
+                    ¿Qué porcentaje de cobertura considera que tiene esta solución Wifi o red inalámbrica?
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="wifi-cobertura" min="0" max="100" placeholder="Ingrese el porcentaje de cobertura">
+            </div>
+        </div>
+    
+        <!-- ¿Los administrativos tienen acceso a la red de solución wifi o red inalámbrica? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="acceso-administrativos">
+                    ¿Los administrativos tienen acceso a la red de solución wifi o red inalámbrica?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="acceso-administrativos">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    
+        <!-- ¿Los docentes tienen acceso a la red de solución wifi o red inalámbrica? -->
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="acceso-docentes">
+                    ¿Los docentes tienen acceso a la red de solución wifi o red inalámbrica?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="acceso-docentes">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    
+        <!-- ¿Los estudiantes tienen acceso a la red de solución wifi o red inalámbrica? -->
+        <div class="w-full lg:w-6/12 pl-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="acceso-estudiantes">
+                    ¿Los estudiantes tienen acceso a la red de solución wifi o red inalámbrica?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="acceso-estudiantes">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    
+        <!-- ¿Cuál es su percepción sobre la velocidad de la red de solución wifi o red inalámbrica de internet? -->
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="percepcion-velocidad">
+                    ¿Cuál es su percepción sobre la velocidad de la red de solución wifi o red inalámbrica de internet?
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="percepcion-velocidad">
+                    <option value="muy_rapida">Muy rápida</option>
+                    <option value="rapida">Rápida</option>
+                    <option value="regular">Regular</option>
+                    <option value="lenta">Lenta</option>
+                    <option value="muy_lenta">Muy lenta</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns flex justify-between">
+        <div class="prev-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Atrás</div>
+
+        <div class="next-stp visita mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Siguiente</div>
+    </div>
+</div>
+<!-- Formulario 5 end -->
+
+
+
+{% endblock %}
